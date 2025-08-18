@@ -1,4 +1,4 @@
-import { getHTML } from "./crawl";
+import { crawlPage, getHTML } from "./crawl";
 
 async function main() {
   if (process.argv.length > 3) {
@@ -13,8 +13,9 @@ async function main() {
 
   const baseURL = process.argv[2];
   console.log(`crawling website ${baseURL}`);
-  await getHTML(baseURL);
 
+  const pages = await crawlPage(baseURL);
+  console.log(pages);
   process.exit(0);
 }
 
