@@ -1,5 +1,5 @@
 import { crawlSiteAsync } from "./crawl";
-import { printReport } from "./report";
+import { printReport } from "./reports";
 
 async function main() {
   if (process.argv.length < 3) {
